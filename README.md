@@ -5,6 +5,7 @@ A simple Bug Tracking App
 Pesky Bug Tracker ReadMe
 
 Overview
+
 I have written a .Net MVC (Core) web application using a SQL Express database for storage.  Whilst I have included functionaility to add, edit and close bugs and progress notes for bugs, the users(Agents) and organisations have no CRUD interface.
 
 User can be configured to be allowed to raise bugs, have bugs assigned to them and login or not or any combination of the above, though obviously restricting their login will impact on their ability to raise or field bugs.  
@@ -18,7 +19,10 @@ There is a menu link to "Api Test Page" which details 3 end points;
 
 A simple Login and Logout mechanism has been included with the credentials below.
 
+
+
 Tour Guide
+
 The functionaility requested was: Your goal is to implement a simple bug tracker. The features we would like, in no particular order:
 ● It should be possible to view the list of open bugs, including their titles
       The default view once logged in is "Open Bugs".  There is a button to switch this view to "Closed Bugs".  And back!  The Bugs have numerous states to hopefully reflect real world bug states, these are {New, Closed, Assigned, Investigated, FixApplied, Awaiting Deployment, MoreInfoRequested, Cancelled, Duplicate}
@@ -32,6 +36,7 @@ description, and when it was opened.  Click the Details Button next to any Bug t
 ● The web application should look nice - no comment(!) I had to "acquire" the logo, don't ask too many questions ok?
 ● The web application should expose some sort of API- via the Api Test Page link or 
 ● The data should be stored in some sort of database - using MS SQL Server Express as a test bench DB.  The database is called "PeskyBugTracker"
+
 
 
 SetUp
@@ -54,6 +59,7 @@ https://localhost:7043/PeskyBugValues/GetAllOpenBugs
 https://localhost:7043/PeskyBugValues/GetBug/4d450e15-b70d-4626-ba05-6f24586a01d8
 
 Note the last one is using a pre added Bug, swap the GUID at the end of the url to another valid bug id to test further
+
 
 
 Details
