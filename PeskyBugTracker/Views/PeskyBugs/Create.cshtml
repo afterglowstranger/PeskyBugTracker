@@ -1,0 +1,60 @@
+﻿@model PeskyBugTracker.Models.PeskyBug
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create a Pesky Bug</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea cols="80" rows="4" id="Description" name="Description"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RaisedBy" class="control-label"></label>
+                @Html.DropDownListFor(m => m.RaisedBy, ViewBag.raisedByList as SelectList, new { @class="form-control"})
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="RaisedAt" class="control-label"></label>
+                <input asp-for="RaisedAt" class="form-control" />
+                <span asp-validation-for="RaisedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="State" class="control-label"></label>
+                @Html.DropDownList("EnumDropDown", ViewBag.ENumStateData as SelectList, new { @class="form-control"})
+                <span asp-validation-for="State" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DuplicateId" class="control-label"></label>
+                <input asp-for="DuplicateId" class="form-control" />
+                <span asp-validation-for="DuplicateId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AssignedTo" class="control-label"></label>
+                @Html.DropDownListFor(m => m.AssignedTo, ViewBag.assigneeOptionsList as SelectList, new { @class="form-control"})
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="control-buttons">
+    <a asp-action="Index" class="btn btn-primary">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

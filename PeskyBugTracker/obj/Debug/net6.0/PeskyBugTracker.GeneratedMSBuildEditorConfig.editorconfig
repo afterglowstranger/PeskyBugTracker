@@ -1,0 +1,113 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = PeskyBugTracker
+build_property.RootNamespace = PeskyBugTracker
+build_property.ProjectDir = C:\Users\Chris\source\github_repos\PeskyBugTracker\PeskyBugTracker\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Chris\source\github_repos\PeskyBugTracker\PeskyBugTracker
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Chris/source/github_repos/PeskyBugTracker/PeskyBugTracker/Views/Agents/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbnRzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Chris/source/github_repos/PeskyBugTracker/PeskyBugTracker/Views/Agents/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbnRzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Chris/source/github_repos/PeskyBugTracker/PeskyBugTracker/Views/Agents/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbnRzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Chris/source/github_repos/PeskyBugTracker/PeskyBugTracker/Views/Agents/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbnRzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Chris/source/github_repos/PeskyBugTracker/PeskyBugTracker/Views/Agents/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbnRzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Chris/source/github_repos/PeskyBugTracker/PeskyBugTracker/Views/Home/ApiTest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBcGlUZXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Chris/source/github_repos/PeskyBugTracker/PeskyBugTracker/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Chris/source/github_repos/PeskyBugTracker/PeskyBugTracker/Views/Home/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Chris/source/github_repos/PeskyBugTracker/PeskyBugTracker/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Chris/source/github_repos/PeskyBugTracker/PeskyBugTracker/Views/NoteEntries/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90ZUVudHJpZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Chris/source/github_repos/PeskyBugTracker/PeskyBugTracker/Views/NoteEntries/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90ZUVudHJpZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Chris/source/github_repos/PeskyBugTracker/PeskyBugTracker/Views/NoteEntries/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90ZUVudHJpZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Chris/source/github_repos/PeskyBugTracker/PeskyBugTracker/Views/NoteEntries/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90ZUVudHJpZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Chris/source/github_repos/PeskyBugTracker/PeskyBugTracker/Views/NoteEntries/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90ZUVudHJpZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Chris/source/github_repos/PeskyBugTracker/PeskyBugTracker/Views/PeskyBugs/Close.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVza3lCdWdzXENsb3NlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Chris/source/github_repos/PeskyBugTracker/PeskyBugTracker/Views/PeskyBugs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVza3lCdWdzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Chris/source/github_repos/PeskyBugTracker/PeskyBugTracker/Views/PeskyBugs/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVza3lCdWdzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Chris/source/github_repos/PeskyBugTracker/PeskyBugTracker/Views/PeskyBugs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVza3lCdWdzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Chris/source/github_repos/PeskyBugTracker/PeskyBugTracker/Views/PeskyBugs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVza3lCdWdzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Chris/source/github_repos/PeskyBugTracker/PeskyBugTracker/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Chris/source/github_repos/PeskyBugTracker/PeskyBugTracker/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Chris/source/github_repos/PeskyBugTracker/PeskyBugTracker/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Chris/source/github_repos/PeskyBugTracker/PeskyBugTracker/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Chris/source/github_repos/PeskyBugTracker/PeskyBugTracker/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-8awo3xmldg

@@ -1,0 +1,66 @@
+﻿@model PeskyBugTracker.Models.PeskyBug
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>PeskyBug</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <input type="hidden" asp-for="RaisedBy" />
+
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RaisedByName" class="control-label"></label>
+                @Html.DropDownListFor(m => m.RaisedBy, ViewBag.raisedByList as SelectList, new { @class="form-control", @disabled = "disabled"})
+                <span asp-validation-for="RaisedByName" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="RaisedAt" class="control-label"></label>
+                <input asp-for="RaisedAt" class="form-control" />
+                <span asp-validation-for="RaisedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="State" class="control-label"></label>
+                @Html.DropDownListFor(m => m.State, ViewBag.ENumStateData as SelectList, new { @class="form-control"})
+                <span asp-validation-for="State" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DuplicateId" class="control-label"></label>
+                <input asp-for="DuplicateId" class="form-control" />
+                <span asp-validation-for="DuplicateId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AssignedTo" class="control-label"></label>
+                @Html.DropDownListFor(m => m.AssignedTo, ViewBag.assigneeOptionsList as SelectList, new { @class="form-control"})
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="control-buttons">
+    <a asp-action="Index" class="btn btn-primary">Back to Pesky Bug List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

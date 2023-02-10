@@ -1,0 +1,69 @@
+﻿@model PeskyBugTracker.Models.Agent
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Agent</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" id="orgId", name="orgId" value="{@ViewBag.orgId}" />
+            <div class="form-group">
+                <label asp-for="Forename" class="control-label"></label>
+                <input asp-for="Forename" class="form-control" />
+                <span asp-validation-for="Forename" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SurnameName" class="control-label"></label>
+                <input asp-for="SurnameName" class="form-control" />
+                <span asp-validation-for="SurnameName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserName" class="control-label"></label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="CanRaiseBugs" /> @Html.DisplayNameFor(model => model.CanRaiseBugs)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="CanFixBugs" /> @Html.DisplayNameFor(model => model.CanFixBugs)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="CanLogin" /> @Html.DisplayNameFor(model => model.CanLogin)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrganisationId" class="control-label"></label>
+                @Html.DropDownListFor(model => model.OrganisationId, ViewBag.orgList as SelectList, new { @class="form-control"})
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-primary">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

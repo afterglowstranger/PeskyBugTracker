@@ -1,0 +1,40 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+img#header-logo {
+    height: 100px;
+    margin-right: 25px;
+}
+
+ul#notesEditor label, ul#notesEditor span {
+    display: block;
+}
+
+
+ul#notesEditor textarea{
+    width: 80%;
+}
+
+div.control-buttons a{
+    margin: 10px 10px 0 0;
+}
+
+div.form-group{
+    margin-bottom: 5px;
+}

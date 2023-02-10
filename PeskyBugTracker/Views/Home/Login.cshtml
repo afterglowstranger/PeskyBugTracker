@@ -1,0 +1,43 @@
+﻿@model PeskyBugTracker.Models.AuthenticateModel
+
+@{
+    ViewData["Title"] = "View";
+}
+
+<h1>Pesky Bug Tracker Login</h1>
+
+
+
+@using (Html.BeginForm("Login", "Home", FormMethod.Post)){
+<table class="table">
+    
+    
+    <tbody>
+
+        <tr>  
+            <td>@Html.LabelFor(a => a.Username)</td>  
+            <td>@Html.TextBoxFor(a => a.Username)</td>  
+            <td>@Html.ValidationMessageFor(a => a.Username)</td>  
+        </tr>  
+        <tr>  
+            <td>  
+            @Html.LabelFor(a => a.Password)  
+            </td>  
+            <td>  
+            @Html.PasswordFor(a => a.Password)  
+            </td>  
+            <td>  
+            @Html.ValidationMessageFor(a => a.Password)  
+            </td>  
+        </tr>  
+        <tr>  
+            <td></td>  
+            <td>  
+            <input type="submit" value="Login" />  
+            </td>  
+            <td></td>  
+        </tr> 
+
+    </tbody>
+</table>
+}

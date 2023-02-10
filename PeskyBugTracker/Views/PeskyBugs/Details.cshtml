@@ -1,0 +1,103 @@
+﻿@model PeskyBugTracker.Models.PeskyBug
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>PeskyBug</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RaisedByName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.Raw(ViewBag.raisedByName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RaisedAt)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RaisedAt)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.State)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.State)
+        </dd>
+       
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AssignedTo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.Raw(ViewBag.assignedToName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <h2>Progress Notes</h2>
+    @if (Model.Notes == null || Model.Notes.Count == 0)
+    {
+        <p>No Notes found for this Bug</p>
+    }
+    else
+    {
+        <ul id="notesEditor" style="list-style-type: none">
+            @for(int i=0; i<Model.Notes.Count; i++)
+            {
+                <li style="padding-bottom: 12px">
+
+                    @Html.Raw(Model.Notes[i].TimeStamp + " - ")
+
+                    @if (Model.Notes[i].AgentID.ToString() != "00000000-0000-0000-0000-000000000000")
+                    {
+                        @Html.Raw( Model.Notes[i].AgentAuthor.FullName() + " added - ")
+                    }
+                    else
+                    {
+                        @Html.Raw(" Bug Tracker Sytem commented... - ")
+                    }
+
+                    @Html.Raw(Model.Notes[i].NoteText)
+
+                </li>
+            }
+        </ul>    
+    }
+</div>  
+<div>
+    <h2>Update Bug Progress Notes</h2>
+    @{
+        using(Html.BeginForm("AddNote", "PeskyBugs")){
+            <textarea cols="300" rows="3" id="NoteText" name="NoteText"></textarea>
+    
+            @Html.HiddenFor(m => m.ID)
+            <div class="form-group">
+                <input type="submit" value="Add Note" class="btn btn-primary" />
+            </div>
+        }
+      }
+    
+
+
+</div>
+<div class="control-buttons">
+    
+    <a asp-action="Edit" asp-route-id="@Model?.ID" class="btn btn-primary">Edit Pesky Bug</a>
+    <a asp-action="Index" class="btn btn-primary">Back to Pesky Bug List</a>
+</div>

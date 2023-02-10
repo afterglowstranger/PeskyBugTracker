@@ -1,0 +1,78 @@
+﻿@model IEnumerable<PeskyBugTracker.Models.PeskyBug>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Bugs Listing</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-success">Create a New Bug</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.RaisedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.State)
+            </th>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.AssignedTo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+          
+            <td>
+                @Html.DisplayFor(modelItem => item.RaisedAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.State)
+            </td>
+          
+            <td>
+                @Html.DisplayFor(modelItem => item.AssignedToName)
+            </td>
+            <td>
+                    <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-primary">Edit</a> 
+                    <a asp-action="Details" asp-route-id="@item.ID" class="btn btn-primary">Details</a> 
+                      @if (ViewBag.BugsList != "Closed")
+                      {
+                       <a asp-action="Close" asp-route-id="@item.ID" class="btn btn-danger">Close Bug</a>
+            
+                      }
+                    
+
+                
+            </td>
+        </tr>
+}
+        @if (ViewBag.BugsList=="Closed")
+        {
+            <a asp-action="Index" class="btn btn-primary">View Open Bugs</a>
+            
+        }
+        else{
+            <a asp-action="IndexAllClosed" class="btn btn-primary" >View Closed Bugs</a>
+        }
+    </tbody>
+</table>

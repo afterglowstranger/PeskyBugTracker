@@ -1,0 +1,66 @@
+﻿@model IEnumerable<PeskyBugTracker.Models.Agent>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Forename)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SurnameName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.CanRaiseBugs)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CanFixBugs)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CanLogin)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Forename)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SurnameName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CanRaiseBugs)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CanFixBugs)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CanLogin)
+            </td>
+            <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Edit</a> 
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary">Details</a> 
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-primary">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
